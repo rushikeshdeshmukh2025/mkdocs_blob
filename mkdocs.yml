@@ -3,6 +3,7 @@ site_description: A Tech Blog on Azure Cloud
 site_url: https://sitename.example
 theme:
   name: material
+  custom_dir: overrides
   palette:
     # Dark mode palette
     - scheme: slate
@@ -32,6 +33,17 @@ plugins:
 
   - tags:
       tags_file: tags.md
+
+  - git-committers:
+      enabled: true
+      repository: rushikeshdeshmukh2025/mkdocs_blob
+      branch: main
+      token: !ENV  GH_TOKEN
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: false
+      enable_creation_date: true
+      enabled: true
 
 extra:
   social:
